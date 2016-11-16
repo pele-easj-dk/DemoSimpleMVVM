@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a212d33f-984b-4a6a-8e4e-6f446297ad46" name="KlasseDiagram" linkedPackageId="d49b2fc7-838c-4f0c-84cd-c4dfcea07e00" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="21049065-adc0-4105-accb-73e2c8ee50f6" name="View">
+        <elementDefinition Id="a91f884f-4a9f-4ed7-84d2-b8f1d46c3304" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="cf829b30-875d-4984-aaeb-725d99b6ba53" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d2f5058d-85c7-49fd-be3f-c5ab5536e389" />
+              <targetEnds>
+                <association Id="2b68e960-2ec3-464d-88fe-1013d771392e" isDerived="false" sourceEndRoleName="MainPage" targetEndRoleName="MainViewModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="691408c8-e0ae-480b-858c-a3ab90217053" LastKnownName="MainViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="904273d4-fa44-45bc-98ec-1cf728ab9400" name="MainPage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="3fbd1faa-4a65-41e3-aa4a-fd284c6dc34d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="63ea4f78-3c49-4b38-9969-9c3f7f646bb1" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="ce175125-13a4-455e-8eb5-0fb715de317a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9e6cf53c-e256-4562-9b2e-0810e2289266" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="42c36297-1175-41ce-b9cf-f3f736ced7b9" name="Viewmodel">
+        <elementDefinition Id="590ee086-018a-4e8e-b402-92bb34a76035" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="691408c8-e0ae-480b-858c-a3ab90217053" name="MainViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="961e5ba6-86dd-4c63-aa7b-1385bbb6c34b" />
+              <suppliersInternal>
+                <interfaceRealization Id="cd0d9685-ed3e-4cf5-b45d-4c6e63d38125">
+                  <interfaceMoniker Id="55866409-b502-4a06-9d01-f7c496fcf204" LastKnownName="InotifyPropertyChanged" />
+                  <elementDefinition Id="12966b43-9348-4af4-b2cf-36afccdda86a" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="2fdce987-bc33-4fbd-aab7-b84550165049" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="Car" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="82983781-6532-4c40-a338-c54da18a94d9" LastKnownName="Car" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c8e706d7-9f60-494d-8da6-cf6f4e798aeb" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="859ebee0-fe07-479e-ada6-dc49c8c0bd78" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ca080f9a-32b0-4e79-ac79-8182f91316cc" name="Car" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="6e19abd0-21af-4a96-a514-1fedc72572c3" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="68016e28-ffec-4d84-9554-8dbcf975d30b" />
+                </association>
+                <association Id="2c345c3a-c6df-4d9a-919d-ca5b04ea2998" isDerived="false" sourceEndRoleName="MainViewModel" targetEndRoleName="CarList" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="315a9bee-3941-4b0c-a775-d8150771942c" LastKnownName="CarList" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e71cbef5-d64c-4226-b7a9-48657a650d8f" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="86afb80c-1b32-4e88-ba7f-728d927625af" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="77f1cdad-6648-449f-b733-8a4d8f9323fa" name="CarList" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d6c9ee4e-0327-4105-8fe1-c958edb50cd7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="7ad2e5d6-eb19-434c-a510-67902060e751" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="e16a4be7-be40-430a-a8a8-6a15431aef0e" name="sometext" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="079c3c84-1414-4962-a47c-5a6f246546a2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6ea18546-ac78-47e0-8247-5c37c1d7732b" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="73b471ca-5b11-46bb-9cc5-e72141168196" name="model">
+        <elementDefinition Id="f8f876f3-25e3-4124-bded-1e5194ae0006" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="82983781-6532-4c40-a338-c54da18a94d9" name="Car" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a2368e67-a58f-4079-8a61-85bfbaf862bf" />
+              <ownedAttributesInternal>
+                <property Id="fc9617e1-3889-473c-a3e5-2d99bf5a04aa" name="regNo" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d20e00c5-f95d-45f5-a9ed-b6be41aeed69" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6ea18546-ac78-47e0-8247-5c37c1d7732b" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
+                <property Id="65fd949e-abdb-4161-9c7d-2aa841bf0398" name="model" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="07fff64d-f892-44a4-933d-e752fc61f2ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6ea18546-ac78-47e0-8247-5c37c1d7732b" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f237f8b5-c76b-4506-80eb-72703bbaff7e" name="AntalDøre" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f4c8c99c-8a30-4807-a7e9-1921ce346297" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="79c4bcc3-62cb-4bf7-a7d1-3b48e2e6ec2e" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="315a9bee-3941-4b0c-a775-d8150771942c" name="CarList" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="8a69a759-2fa8-45c8-80d7-ab1ea8fe528b" />
+              <targetEnds>
+                <association Id="60ec0cba-0912-4f80-99fe-5e42e60591c7" isDerived="false" sourceEndRoleName="CarList" targetEndRoleName="Car" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="82983781-6532-4c40-a338-c54da18a94d9" LastKnownName="Car" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0c84c4a5-cba9-41ee-9bbf-68b7e626bfec" name="CarList" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="9a7c928e-1253-4439-8cf1-6f1b6f799143" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="26ad859d-e4a4-45c7-a7cb-0828ae6e9cb8" name="Car" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="adca54a7-275f-4ea7-8677-6549193e49a8" name="Lower" value="*">
+                            <elementDefinition Id="2efebd02-83a5-4cfe-aa6c-ccbfb050726b" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="e5258f71-38af-46a3-a87d-041afbf50733" name="Upper" value="*">
+                            <elementDefinition Id="ae84ae63-3557-4cf4-a87c-d103af638c3a" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="d9eefb35-db79-4b42-b5a6-c1cb310f11b1" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="25d4ec87-b836-426d-aaba-1583814ccc65" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="6ea18546-ac78-47e0-8247-5c37c1d7732b" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="f6664f29-cfa0-4c7c-a36c-c3aea0e41ddd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="79c4bcc3-62cb-4bf7-a7d1-3b48e2e6ec2e" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="930b3128-cdd2-4433-80ae-9bd6fcc18260" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="55866409-b502-4a06-9d01-f7c496fcf204" name="InotifyPropertyChanged" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="969a4771-b299-4890-a840-6173bd0f5dca" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d49b2fc7-838c-4f0c-84cd-c4dfcea07e00" name="DCD">
+    <elementDefinition Id="541823b6-d640-46d6-89ee-2e7134867275" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d91d53c2-2b08-4cac-a8d2-b3df718fa447">
+        <profileInstance Id="b43e3d04-3e5c-4231-b2aa-dc2ee32e856c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="aa025318-32c9-452a-bc6e-82c257a23962">
+        <profileInstance Id="18db0a1f-4497-4826-bf65-bcd12976098e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
