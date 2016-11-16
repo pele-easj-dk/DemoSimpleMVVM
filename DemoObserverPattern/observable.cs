@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace DemoObserverPattern
 {
-    class observable:INotifyPropertyChanged
+    class Observable:INotifyPropertyChanged
     {
         private int number;
         private String name;
+        private String item;
 
         public int Number
         {
@@ -33,14 +34,22 @@ namespace DemoObserverPattern
             }
         }
 
-        public observable()
+        public string Item
+        {
+            get { return item; }
+            set { item = value; }
+        }
+
+        public Observable()
         {
         }
 
+
         public override string ToString()
         {
-            return $"Number: {number}, Name: {name}";
+            return $"Number: {number}, Name: {name}, Item: {item}";
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

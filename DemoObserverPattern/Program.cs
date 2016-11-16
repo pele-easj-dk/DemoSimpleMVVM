@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +19,58 @@ namespace DemoObserverPattern
 
         private void Start()
         {
-            observable ob = new observable();
+            Observable ob = new Observable();
+
+            Console.WriteLine();
+            Console.WriteLine("---> One method assigned as observer");
+            Console.WriteLine();
             ob.PropertyChanged += ObserverMetode1;
             ob.Name = "peter";
 
+            Console.WriteLine();
+            Console.WriteLine("---> two method assigned as observer");
+            Console.WriteLine();
             ob.PropertyChanged += ObserverMetode2;
             ob.Number = 12345;
+
+            Console.WriteLine();
+            Console.WriteLine("---> first method removed as observer");
+            Console.WriteLine();
+            ob.PropertyChanged -= ObserverMetode1;
+            ob.Number = 54321;
+
+            Console.WriteLine();
+            Console.WriteLine("---> Item property do not send a notification");
+            Console.WriteLine();
+            ob.Item = "MyItem";
+
+            Console.WriteLine();
+            Console.WriteLine("---> Name property do send a notification");
+            Console.WriteLine();
+            ob.Name = "Martin";
+
+
 
             Console.ReadLine();
         }
 
-        private void ObserverMetode2(object sender, PropertyChangedEventArgs e)
+        private void ObserverMetode1(object sender, PropertyChangedEventArgs e)
         {
-            Console.WriteLine("Property derer ændret er " + e.PropertyName);
+            String propName = e.PropertyName;
+
+            PropertyInfo[] pInfos = sender.GetType().GetProperties();
+            foreach (PropertyInfo pi in pInfos)
+            {
+                if (pi.Name == e.PropertyName)
+                {
+                    String value = sender.GetType().GetProperty(propName).GetValue(sender).ToString();
+                    Console.WriteLine($"Property der er ændret er {propName} = {value}");
+                }
+                
+            }
         }
 
-        private void ObserverMetode1(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        private void ObserverMetode2(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
             Console.WriteLine($"Metode 1 ob = " + sender.ToString());
             
