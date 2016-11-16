@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="using:DemoSimpleMVVM.viewmodel"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="DemoSimpleMVVM.MainPage"
     mc:Ignorable="d">
 
@@ -21,8 +22,15 @@
             <TextBox x:Name="textBox4" TextWrapping="Wrap" Text="{Binding ACar.Model, Mode=TwoWay}"/>
             <TextBox x:Name="textBox5" TextWrapping="Wrap" Text="{Binding ACar.AntalDøre, Mode=TwoWay}"/>
         </StackPanel>
-        <ListView x:Name="listView" HorizontalAlignment="Right" Margin="0,67,63,49" Width="163" ItemsSource="{Binding Liste}" SelectedItem="{Binding ACar, Mode=TwoWay}"/>
-        <Button x:Name="button" Content="OpretBil&#xD;&#xA;" Margin="78,0,0,81" VerticalAlignment="Bottom" Width="94" Command="{Binding CreateCarCommand, Mode=OneWay}"/>
+        <ListView x:Name="listView" HorizontalAlignment="Right" Margin="0,67,63,49" Width="163" ItemsSource="{Binding Common.Liste}" SelectedItem="{Binding ACar, Mode=TwoWay}"/>
+        <Button x:Name="button" Content="OpretBil&#xA;" Margin="78,0,0,81" VerticalAlignment="Bottom" Width="94" Command="{Binding CreateCarCommand, Mode=OneWay}"/>
+        <Button x:Name="button1" Content="Vis Biler" HorizontalAlignment="Right" Margin="0,0,246,29" VerticalAlignment="Bottom" RenderTransformOrigin="0.505,0.5">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="DemoSimpleMVVM.view.ShowCars"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
 
     </Grid>
 </Page>

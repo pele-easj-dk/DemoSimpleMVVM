@@ -17,9 +17,8 @@ namespace DemoSimpleMVVM.viewmodel
         // attribut
         private String sometext;
         private Car aCar;
-        private ObservableCollection<Car> liste;
         private RelayCommand createCar;
-
+        private SharedInformationSingleton common;
 
 
         // property
@@ -35,9 +34,9 @@ namespace DemoSimpleMVVM.viewmodel
             }
         }
 
-        public ObservableCollection<Car> Liste
+        public SharedInformationSingleton Common
         {
-            get { return liste; }
+            get { return common; }
         }
 
         public RelayCommand CreateCarCommand
@@ -64,10 +63,8 @@ namespace DemoSimpleMVVM.viewmodel
         {
             Sometext = "load værdi";
             ACar = new Car("Dummy123", "Dummy", 0);
-            liste = new ObservableCollection<Car>();
-            liste.Add(new Car("zz23456", "audi", 5));
-            liste.Add(new Car("aa12345", "vw", 5));
-
+            
+            common = SharedInformationSingleton.Instance;
             createCar = new RelayCommand(CreateCar);
 
 
@@ -95,7 +92,7 @@ namespace DemoSimpleMVVM.viewmodel
         public void CreateCar()
         {
             Car car = new Car(sometext, "audi", 5);
-            liste.Add(car);
+            common.Liste.Add(car);
         }
     }
 }
