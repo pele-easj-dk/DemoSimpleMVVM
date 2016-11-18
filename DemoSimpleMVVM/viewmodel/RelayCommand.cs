@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace DemoSimpleMVVM.viewmodel
 {
-    class RelayCommand:ICommand
+    public class RelayCommand:ICommand
     {
         private Action command;
 

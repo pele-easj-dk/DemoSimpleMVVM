@@ -12,7 +12,7 @@ using DemoSimpleMVVM.model;
 
 namespace DemoSimpleMVVM.viewmodel
 {
-    class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged
     {
         // attribut
         private String sometext;

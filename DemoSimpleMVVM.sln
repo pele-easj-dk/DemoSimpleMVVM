@@ -9,6 +9,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DCD", "DCD\DCD.modelproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoObserverPattern", "DemoObserverPattern\DemoObserverPattern.csproj", "{B9154410-4533-4F41-A27C-8C04A60F87A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAfViewmodel", "TestAfViewmodel\TestAfViewmodel.csproj", "{1FCB0DD0-B441-4338-AE13-CF80BF69573D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,26 @@ Global
 		{B9154410-4533-4F41-A27C-8C04A60F87A2}.Release|x64.Build.0 = Release|Any CPU
 		{B9154410-4533-4F41-A27C-8C04A60F87A2}.Release|x86.ActiveCfg = Release|Any CPU
 		{B9154410-4533-4F41-A27C-8C04A60F87A2}.Release|x86.Build.0 = Release|Any CPU
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|ARM.Build.0 = Debug|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x64.ActiveCfg = Debug|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x64.Build.0 = Debug|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x64.Deploy.0 = Debug|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x86.ActiveCfg = Debug|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x86.Build.0 = Debug|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Debug|x86.Deploy.0 = Debug|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|Any CPU.ActiveCfg = Release|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|ARM.ActiveCfg = Release|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|ARM.Build.0 = Release|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|ARM.Deploy.0 = Release|ARM
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x64.ActiveCfg = Release|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x64.Build.0 = Release|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x64.Deploy.0 = Release|x64
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x86.ActiveCfg = Release|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x86.Build.0 = Release|x86
+		{1FCB0DD0-B441-4338-AE13-CF80BF69573D}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ using DemoSimpleMVVM.model;
 
 namespace DemoSimpleMVVM.viewmodel
 {
-    class SharedInformationSingleton
+    public class SharedInformationSingleton
     {
         // singleton
         private SharedInformationSingleton()

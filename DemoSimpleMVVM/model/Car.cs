@@ -9,7 +9,7 @@ using DemoSimpleMVVM.Annotations;
 
 namespace DemoSimpleMVVM.model
 {
-    class Car:INotifyPropertyChanged
+    public class Car:INotifyPropertyChanged
     {
         // attributter
         private String regNo;
