@@ -28,8 +28,8 @@ namespace DemoSimpleMVVM.viewmodel
             set
             {
                 sometext = value;
-                Car c = new Car(value, "vw", 3);
-                ACar = c;
+                //Car c = new Car(value, "vw", 3);
+                //ACar = c;
                 NotifyView("Sometext");
             }
         }

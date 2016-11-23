@@ -21,6 +21,7 @@
             <TextBox x:Name="textBox3" TextWrapping="Wrap" Text="{Binding ACar.RegNo, Mode=TwoWay}"/>
             <TextBox x:Name="textBox4" TextWrapping="Wrap" Text="{Binding ACar.Model, Mode=TwoWay}"/>
             <TextBox x:Name="textBox5" TextWrapping="Wrap" Text="{Binding ACar.AntalDøre, Mode=TwoWay}"/>
+            <TextBox x:Name="PetersText" Text="Peter"></TextBox> 
         </StackPanel>
         <ListView x:Name="listView" HorizontalAlignment="Right" Margin="0,67,63,49" Width="163" ItemsSource="{Binding Common.Liste}" SelectedItem="{Binding ACar, Mode=TwoWay}"/>
         <Button x:Name="button" Content="OpretBil&#xA;" Margin="78,0,0,81" VerticalAlignment="Bottom" Width="94" Command="{Binding CreateCarCommand, Mode=OneWay}"/>

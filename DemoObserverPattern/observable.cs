@@ -20,7 +20,7 @@ namespace DemoObserverPattern
             set
             {
                 number = value;
-                OnPropertyChanged();   
+                OnPropertyChanged("Number");   
             }
         }
 
@@ -30,14 +30,14 @@ namespace DemoObserverPattern
             set
             {
                 name = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Name");
             }
         }
 
         public string Item
         {
             get { return item; }
-            set { item = value; }
+            set { item = value; } // No notify !! 
         }
 
         public Observable()
@@ -51,9 +51,9 @@ namespace DemoObserverPattern
         }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged; // liste af observere
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

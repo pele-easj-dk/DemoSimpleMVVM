@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DemoObserverPattern
 {
@@ -24,7 +19,7 @@ namespace DemoObserverPattern
             Console.WriteLine();
             Console.WriteLine("---> One method assigned as observer");
             Console.WriteLine();
-            ob.PropertyChanged += ObserverMetode1;
+            ob.PropertyChanged += ObserverMetode1;  // observer med metoden ObserverMetode1
             ob.Name = "peter";
 
             Console.WriteLine();
@@ -61,7 +56,7 @@ namespace DemoObserverPattern
             PropertyInfo[] pInfos = sender.GetType().GetProperties();
             foreach (PropertyInfo pi in pInfos)
             {
-                if (pi.Name == e.PropertyName)
+                if (pi.Name == propName)
                 {
                     String value = sender.GetType().GetProperty(propName).GetValue(sender).ToString();
                     Console.WriteLine($"Property der er ændret er {propName} = {value}");
@@ -72,7 +67,7 @@ namespace DemoObserverPattern
 
         private void ObserverMetode2(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
-            Console.WriteLine($"Metode 1 ob = " + sender.ToString());
+            Console.WriteLine($"Metode 2 ob = " + sender.ToString());
             
         }
 
